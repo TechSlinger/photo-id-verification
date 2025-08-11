@@ -1,0 +1,10 @@
+flask
+deepface
+opencv-python-headless
+mtcnn
+pillow
+pdf2image
+numpy
+mediapipe
+streamlit
+PyMuPDF
