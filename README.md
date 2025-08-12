@@ -96,30 +96,8 @@ photo-id-verification/
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/quality-check` | Validate photo quality criteria |
-| `POST` | `/verify` | Compare face with ID card photo |
-| `POST` | `/full-verify` | Complete two-stage verification |
-| `GET` | `/health` | Health check |
-
-### Example Usage
-
-```python
-import requests
-
-# Photo quality check
-with open('photo.jpg', 'rb') as f:
-    response = requests.post('http://localhost:5000/quality-check', 
-                           files={'image': f})
-    quality = response.json()
-    print(f"Quality Score: {quality['score']}")
-
-# ID card face verification
-with open('photo.jpg', 'rb') as f1, open('id_card.jpg', 'rb') as f2:
-    response = requests.post('http://localhost:5000/verify', 
-                           files={'photo': f1, 'id_card': f2})
-    result = response.json()
-    print(f"Match: {result['match']}, Confidence: {result['confidence']}")
-```
+| `POST` | `/validate_photo` | Validate photo quality criteria |
+| `POST` | `/match_faces` | Compare face with ID card photo |
 
 ## ⚙️ Configuration
 
@@ -155,24 +133,6 @@ conda env create -f environment.yml
 conda env remove -n photo-id-app
 ```
 
-## 🧪 Development
-
-### Testing
-
-```bash
-# Activate conda environment
-conda activate photo-id-app
-
-# Install test dependencies
-pip install pytest pytest-cov
-
-# Run tests
-pytest tests/
-
-# Run with coverage
-pytest --cov=. tests/
-```
-
 ### Adding New Features
 
 1. **Quality Criteria**: Add new validation rules to `utils.py`
@@ -196,10 +156,6 @@ We love contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for 
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👥 Authors
 
 - **Fatima Sekri** - *Initial work* - [https://github.com/TechSlinger]
@@ -212,8 +168,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📧 Email: fatimasekri66@example.com
-- 💬 Discussions: [GitHub Discussions](https://github.com/TechSlinger/photo-id-verification/discussions)
-- 🐛 Issues: [GitHub Issues](https://github.com/TechSlinger/photo-id-verification/issues)
+- 💬 Discussions: [https://github.com/TechSlinger/photo-id-verification/discussions]
+- 🐛 Issues: [https://github.com/TechSlinger/photo-id-verification/issues]
 
 ---
 
