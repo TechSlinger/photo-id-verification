@@ -16,11 +16,13 @@
 - ⚡ **Fast Processing** - Optimized for real-time verification
 - 🔧 **Easy Setup** - Conda environment support
 - 📱 **User Friendly** - Interactive web interface
-- 🛡️ **Secure** - Built with security best practices
 
 ## 📸 Demo
+<img width="966" height="138" alt="image" src="https://github.com/user-attachments/assets/74c6c1f1-18a9-4531-a65d-74e35c83511f" />
 
-*Add screenshots or GIFs of your application here*
+<img width="967" height="137" alt="image" src="https://github.com/user-attachments/assets/1ab342e2-879c-492c-bf5b-b20689dd6fab" />
+
+
 
 ## 🛠️ Tech Stack
 
